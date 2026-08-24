@@ -2,10 +2,16 @@
 % Please edit documentation in R/extendr-wrappers.R
 \name{default_azure_credential}
 \alias{default_azure_credential}
-\title{Create the default Azure credential chain.}
+\title{Get an access token using the default Azure credential chain.}
 \usage{
-default_azure_credential()
+default_azure_credential(scopes)
+}
+\arguments{
+\item{scopes}{One or more Azure OAuth 2.0 scopes.}
+}
+\value{
+A scalar character access token.
 }
 \description{
-Create the default Azure credential chain.
+Get an access token using the default Azure credential chain.
 }

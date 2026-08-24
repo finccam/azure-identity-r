@@ -5,25 +5,10 @@
 #' @useDynLib azidentity, .registration = TRUE
 NULL
 
-#' Create the default Azure credential chain.
+#' Get an access token using the default Azure credential chain.
+#' @param scopes One or more Azure OAuth 2.0 scopes.
+#' @return A scalar character access token.
 #' @export
-default_azure_credential <- function() .Call(wrap__default_azure_credential)
-
-#' An Azure credential that selects and retains the first authentication method that succeeds.
-#' Methods for requesting Azure access tokens.
-#' @section Methods:
-#'\subsection{Method `get_token`}{
-#'Request an access token for one or more scopes.
-#'}
-#'
-AzureCredential <- new.env(parent = emptyenv())
-
-AzureCredential$get_token <- function(scopes) .Call(wrap__AzureCredential__get_token, self, scopes)
-
-#' @export
-`$.AzureCredential` <- function (self, name) { func <- AzureCredential[[name]]; environment(func) <- environment(); func }
-
-#' @export
-`[[.AzureCredential` <- `$.AzureCredential`
+default_azure_credential <- function(scopes) .Call(wrap__default_azure_credential, scopes)
 
 # nolint end
