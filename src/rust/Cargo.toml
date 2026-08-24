@@ -3,7 +3,7 @@ name = 'azidentity'
 publish = false
 version = '0.1.0'
 edition = '2021'
-rust-version = '1.65'
+rust-version = '1.88'
 
 [lib]
 crate-type = [ 'rlib', 'staticlib' ]
@@ -14,7 +14,11 @@ name = 'document'
 path = 'document.rs'
 
 [dependencies]
-extendr-api = '*'
+async-trait = '0.1'
+azure_core = '=1.0.0'
+azure_identity = { version = '=1.0.0', features = [ 'tokio' ] }
+extendr-api = '=0.9.0'
+tokio = { version = '1.49', features = [ 'macros', 'rt-multi-thread', 'sync' ] }
 
 [profile.release]
 lto = true

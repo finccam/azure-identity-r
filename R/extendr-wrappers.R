@@ -5,8 +5,10 @@
 #' @useDynLib azidentity, .registration = TRUE
 NULL
 
-#' Return string `"Hello world!"` to R.
+#' Get an access token using the default Azure credential chain.
+#' @param scopes One or more Azure OAuth 2.0 scopes.
+#' @return A scalar character access token.
 #' @export
-hello_world <- function() .Call(wrap__hello_world)
+default_azure_credential <- function(scopes) .Call(wrap__default_azure_credential, scopes)
 
 # nolint end
