@@ -1,0 +1,1092 @@
+{
+  "version": 5,
+  "revision": 0,
+  "r": "4.5.2",
+  "repos": [
+    {
+      "kind": "rrepo",
+      "url": "https://upstream.rrepo.dev/cran"
+    }
+  ],
+  "requirements": [
+    "devtools (< 3.0.0)",
+    "devtools (>= 2.5.2)",
+    "rextendr (< 1.0.0)",
+    "rextendr (>= 0.5.0)"
+  ],
+  "packages": {
+    "R6": {
+      "version": "2.6.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.6)"
+      ]
+    },
+    "Rcpp": {
+      "version": "1.1.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.5.0)",
+        "methods",
+        "utils"
+      ]
+    },
+    "askpass": {
+      "version": "1.2.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "sys (>= 2.1)"
+      ]
+    },
+    "base64enc": {
+      "version": "0.1-6",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 2.9.0)"
+      ]
+    },
+    "brew": {
+      "version": "1.0-10",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": []
+    },
+    "brio": {
+      "version": "1.1.5",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.6)"
+      ]
+    },
+    "bslib": {
+      "version": "0.12.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 2.10)",
+        "base64enc",
+        "cachem",
+        "fastmap (>= 1.1.1)",
+        "grDevices",
+        "htmltools (>= 0.5.8)",
+        "jquerylib (>= 0.1.3)",
+        "jsonlite",
+        "lifecycle",
+        "memoise (>= 2.0.1)",
+        "mime",
+        "rlang",
+        "sass (>= 0.4.9)"
+      ]
+    },
+    "cachem": {
+      "version": "1.1.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "fastmap (>= 1.2.0)",
+        "rlang"
+      ]
+    },
+    "callr": {
+      "version": "3.8.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4)",
+        "R6",
+        "otel (>= 0.2.0)",
+        "processx (>= 3.6.1)",
+        "utils"
+      ]
+    },
+    "cli": {
+      "version": "3.6.6",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4)",
+        "utils"
+      ]
+    },
+    "clipr": {
+      "version": "0.8.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "utils"
+      ]
+    },
+    "commonmark": {
+      "version": "2.0.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": []
+    },
+    "cpp11": {
+      "version": "0.5.5",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.0.0)"
+      ]
+    },
+    "crayon": {
+      "version": "1.5.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "grDevices",
+        "methods",
+        "utils"
+      ]
+    },
+    "credentials": {
+      "version": "2.0.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "askpass",
+        "curl",
+        "jsonlite",
+        "openssl (>= 1.3)",
+        "sys (>= 2.1)"
+      ]
+    },
+    "curl": {
+      "version": "7.1.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.0.0)"
+      ]
+    },
+    "desc": {
+      "version": "1.4.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4)",
+        "R6",
+        "cli",
+        "utils"
+      ]
+    },
+    "devtools": {
+      "version": "2.5.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)",
+        "cli (>= 3.6.6)",
+        "desc (>= 1.4.3)",
+        "ellipsis (>= 0.3.3)",
+        "fs (>= 2.1.0)",
+        "lifecycle (>= 1.0.5)",
+        "memoise (>= 2.0.1)",
+        "miniUI (>= 0.1.2)",
+        "pak (>= 0.9.5)",
+        "pkgbuild (>= 1.4.8)",
+        "pkgdown (>= 2.2.0)",
+        "pkgload (>= 1.5.2)",
+        "profvis (>= 0.4.0)",
+        "rcmdcheck (>= 1.4.0)",
+        "rlang (>= 1.2.0)",
+        "roxygen2 (>= 7.3.3)",
+        "rversions (>= 3.0.0)",
+        "sessioninfo (>= 1.2.3)",
+        "testthat (>= 3.3.2)",
+        "urlchecker (>= 1.0.1)",
+        "usethis (>= 3.2.1)",
+        "withr (>= 3.0.2)"
+      ]
+    },
+    "diffobj": {
+      "version": "0.3.8",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1.0)",
+        "crayon (>= 1.3.2)",
+        "methods",
+        "stats",
+        "tools",
+        "utils"
+      ]
+    },
+    "digest": {
+      "version": "0.6.39",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.3.0)",
+        "utils"
+      ]
+    },
+    "downlit": {
+      "version": "0.4.5",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.0.0)",
+        "brio",
+        "desc",
+        "digest",
+        "evaluate",
+        "fansi",
+        "memoise",
+        "rlang",
+        "vctrs",
+        "withr",
+        "yaml"
+      ]
+    },
+    "dplyr": {
+      "version": "1.2.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1.0)",
+        "R6",
+        "cli (>= 3.6.2)",
+        "generics",
+        "glue (>= 1.3.2)",
+        "lifecycle (>= 1.0.5)",
+        "magrittr (>= 1.5)",
+        "methods",
+        "pillar (>= 1.9.0)",
+        "rlang (>= 1.1.7)",
+        "tibble (>= 3.2.0)",
+        "tidyselect (>= 1.2.0)",
+        "utils",
+        "vctrs (>= 0.7.1)"
+      ]
+    },
+    "ellipsis": {
+      "version": "0.3.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.2)",
+        "rlang (>= 1.1.7)"
+      ]
+    },
+    "evaluate": {
+      "version": "1.0.5",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.6.0)"
+      ]
+    },
+    "fansi": {
+      "version": "1.0.7",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.1.0)",
+        "grDevices",
+        "utils"
+      ]
+    },
+    "fastmap": {
+      "version": "1.2.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": []
+    },
+    "fontawesome": {
+      "version": "0.5.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.3.0)",
+        "htmltools (>= 0.5.1.1)",
+        "rlang (>= 1.0.6)"
+      ]
+    },
+    "fs": {
+      "version": "2.1.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)",
+        "methods"
+      ]
+    },
+    "generics": {
+      "version": "0.1.4",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.6)",
+        "methods"
+      ]
+    },
+    "gert": {
+      "version": "2.4.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "askpass",
+        "credentials (>= 1.2.1)",
+        "openssl (>= 2.0.3)",
+        "rstudioapi (>= 0.11)",
+        "sys",
+        "zip (>= 2.1.0)"
+      ]
+    },
+    "gh": {
+      "version": "1.6.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)",
+        "cli (>= 3.0.1)",
+        "gitcreds",
+        "glue",
+        "httr2 (>= 1.0.6)",
+        "ini",
+        "jsonlite",
+        "lifecycle",
+        "rlang (>= 1.1.0)"
+      ]
+    },
+    "gitcreds": {
+      "version": "0.1.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4)"
+      ]
+    },
+    "glue": {
+      "version": "1.8.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)",
+        "methods"
+      ]
+    },
+    "highr": {
+      "version": "0.12",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.3.0)",
+        "xfun (>= 0.18)"
+      ]
+    },
+    "htmltools": {
+      "version": "0.5.9",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 2.14.1)",
+        "base64enc",
+        "digest",
+        "fastmap (>= 1.1.0)",
+        "grDevices",
+        "rlang (>= 1.0.0)",
+        "utils"
+      ]
+    },
+    "htmlwidgets": {
+      "version": "1.6.4",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "grDevices",
+        "htmltools (>= 0.5.7)",
+        "jsonlite (>= 0.9.16)",
+        "knitr (>= 1.8)",
+        "rmarkdown",
+        "yaml"
+      ]
+    },
+    "httpuv": {
+      "version": "1.6.17",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 2.15.1)",
+        "R6",
+        "Rcpp",
+        "Rcpp (>= 1.0.7)",
+        "later",
+        "later (>= 0.8.0)",
+        "promises",
+        "utils"
+      ]
+    },
+    "httr2": {
+      "version": "1.3.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)",
+        "R6",
+        "cli (>= 3.0.0)",
+        "curl (>= 6.4.0)",
+        "glue",
+        "lifecycle",
+        "magrittr",
+        "openssl",
+        "rlang (>= 1.3.0)",
+        "vctrs (>= 0.6.3)",
+        "withr"
+      ]
+    },
+    "ini": {
+      "version": "0.3.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": []
+    },
+    "jquerylib": {
+      "version": "0.1.4",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "htmltools"
+      ]
+    },
+    "jsonlite": {
+      "version": "2.0.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "methods"
+      ]
+    },
+    "knitr": {
+      "version": "1.51",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.6.0)",
+        "evaluate (>= 0.15)",
+        "highr (>= 0.11)",
+        "methods",
+        "tools",
+        "xfun (>= 0.52)",
+        "yaml (>= 2.1.19)"
+      ]
+    },
+    "later": {
+      "version": "1.4.8",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.5)",
+        "Rcpp",
+        "Rcpp (>= 1.0.10)",
+        "rlang"
+      ]
+    },
+    "lifecycle": {
+      "version": "1.0.5",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.6)",
+        "cli (>= 3.4.0)",
+        "rlang (>= 1.1.0)"
+      ]
+    },
+    "magrittr": {
+      "version": "2.0.5",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4.0)"
+      ]
+    },
+    "memoise": {
+      "version": "2.0.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "cachem",
+        "rlang (>= 0.4.10)"
+      ]
+    },
+    "mime": {
+      "version": "0.13",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "tools"
+      ]
+    },
+    "miniUI": {
+      "version": "0.1.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "htmltools (>= 0.3)",
+        "shiny (>= 0.13)",
+        "utils"
+      ]
+    },
+    "openssl": {
+      "version": "2.4.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "askpass"
+      ]
+    },
+    "otel": {
+      "version": "0.2.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.6.0)"
+      ]
+    },
+    "pak": {
+      "version": "0.11.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.5)",
+        "tools",
+        "utils"
+      ]
+    },
+    "pillar": {
+      "version": "1.11.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "cli (>= 2.3.0)",
+        "glue",
+        "lifecycle",
+        "rlang (>= 1.0.2)",
+        "utf8 (>= 1.1.0)",
+        "utils",
+        "vctrs (>= 0.5.0)"
+      ]
+    },
+    "pkgbuild": {
+      "version": "1.4.8",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.5)",
+        "R6",
+        "callr (>= 3.2.0)",
+        "cli (>= 3.4.0)",
+        "desc",
+        "processx"
+      ]
+    },
+    "pkgconfig": {
+      "version": "2.0.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "utils"
+      ]
+    },
+    "pkgdown": {
+      "version": "2.2.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)",
+        "bslib (>= 0.5.1)",
+        "callr (>= 3.7.3)",
+        "cli (>= 3.6.1)",
+        "desc (>= 1.4.0)",
+        "downlit (>= 0.4.4)",
+        "fontawesome",
+        "fs (>= 1.4.0)",
+        "httr2 (>= 1.0.2)",
+        "jsonlite",
+        "lifecycle",
+        "openssl",
+        "purrr (>= 1.0.0)",
+        "ragg (>= 1.4.0)",
+        "rlang (>= 1.1.4)",
+        "rmarkdown (>= 2.27)",
+        "tibble",
+        "whisker",
+        "withr (>= 2.4.3)",
+        "xml2 (>= 1.3.1)",
+        "yaml (>= 2.3.9)"
+      ]
+    },
+    "pkgload": {
+      "version": "1.5.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4.0)",
+        "cli (>= 3.3.0)",
+        "desc",
+        "fs",
+        "glue",
+        "lifecycle",
+        "methods",
+        "pkgbuild",
+        "processx",
+        "rlang (>= 1.1.1)",
+        "rprojroot",
+        "utils"
+      ]
+    },
+    "praise": {
+      "version": "1.0.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": []
+    },
+    "prettyunits": {
+      "version": "1.2.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 2.10)"
+      ]
+    },
+    "processx": {
+      "version": "3.9.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4.0)",
+        "R6",
+        "ps (>= 1.9.3)",
+        "utils"
+      ]
+    },
+    "profvis": {
+      "version": "0.4.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.0)",
+        "htmlwidgets (>= 0.3.2)",
+        "rlang (>= 1.1.0)",
+        "vctrs"
+      ]
+    },
+    "promises": {
+      "version": "1.5.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1.0)",
+        "R6",
+        "fastmap (>= 1.1.0)",
+        "later",
+        "lifecycle",
+        "magrittr (>= 1.5)",
+        "otel (>= 0.2.0)",
+        "rlang"
+      ]
+    },
+    "ps": {
+      "version": "1.9.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4)",
+        "utils"
+      ]
+    },
+    "purrr": {
+      "version": "1.2.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)",
+        "cli",
+        "cli (>= 3.6.1)",
+        "lifecycle (>= 1.0.3)",
+        "magrittr (>= 1.5.0)",
+        "rlang (>= 1.1.1)",
+        "vctrs (>= 0.6.3)"
+      ]
+    },
+    "ragg": {
+      "version": "1.5.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "systemfonts",
+        "systemfonts (>= 1.0.3)",
+        "textshaping",
+        "textshaping (>= 0.3.0)"
+      ]
+    },
+    "rappdirs": {
+      "version": "0.3.4",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)"
+      ]
+    },
+    "rcmdcheck": {
+      "version": "1.4.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R6",
+        "callr (>= 3.1.1.9000)",
+        "cli (>= 3.0.0)",
+        "curl",
+        "desc (>= 1.2.0)",
+        "digest",
+        "pkgbuild",
+        "prettyunits",
+        "rprojroot",
+        "sessioninfo (>= 1.1.1)",
+        "utils",
+        "withr",
+        "xopen"
+      ]
+    },
+    "rdtools": {
+      "version": "0.1.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.0)",
+        "stats",
+        "tools"
+      ]
+    },
+    "rextendr": {
+      "version": "0.5.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.2)",
+        "brio",
+        "cli",
+        "desc",
+        "dplyr",
+        "glue (>= 1.7.0)",
+        "jsonlite",
+        "lifecycle",
+        "pkgbuild (>= 1.4.0)",
+        "processx",
+        "rlang (>= 1.0.5)",
+        "rprojroot",
+        "stringi",
+        "vctrs",
+        "withr"
+      ]
+    },
+    "rlang": {
+      "version": "1.3.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.0.0)",
+        "utils"
+      ]
+    },
+    "rmarkdown": {
+      "version": "2.31",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.0)",
+        "bslib (>= 0.2.5.1)",
+        "evaluate (>= 0.13)",
+        "fontawesome (>= 0.5.0)",
+        "htmltools (>= 0.5.1)",
+        "jquerylib",
+        "jsonlite",
+        "knitr (>= 1.43)",
+        "methods",
+        "tinytex (>= 0.31)",
+        "tools",
+        "utils",
+        "xfun (>= 0.36)",
+        "yaml (>= 2.1.19)"
+      ]
+    },
+    "roxygen2": {
+      "version": "8.1.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)",
+        "R6 (>= 2.1.2)",
+        "brew",
+        "cli (>= 3.3.0)",
+        "commonmark",
+        "cpp11",
+        "desc (>= 1.2.0)",
+        "knitr",
+        "lifecycle",
+        "methods",
+        "pkgload (>= 1.5.2)",
+        "rdtools (>= 0.1.0)",
+        "rlang (>= 1.1.0)",
+        "utils",
+        "withr",
+        "xml2"
+      ]
+    },
+    "rprojroot": {
+      "version": "2.1.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.0.0)"
+      ]
+    },
+    "rstudioapi": {
+      "version": "0.19.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": []
+    },
+    "rversions": {
+      "version": "3.0.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "curl"
+      ]
+    },
+    "sass": {
+      "version": "0.4.10",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R6",
+        "fs (>= 1.2.4)",
+        "htmltools (>= 0.5.1)",
+        "rappdirs",
+        "rlang (>= 0.4.10)"
+      ]
+    },
+    "sessioninfo": {
+      "version": "1.2.4",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4)",
+        "cli (>= 3.1.0)",
+        "tools",
+        "utils"
+      ]
+    },
+    "shiny": {
+      "version": "1.14.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.1.2)",
+        "R6 (>= 2.0)",
+        "bslib (>= 0.6.0)",
+        "cachem (>= 1.1.0)",
+        "cli",
+        "commonmark (>= 2.0.0)",
+        "fastmap (>= 1.1.1)",
+        "fontawesome (>= 0.4.0)",
+        "glue (>= 1.3.2)",
+        "grDevices",
+        "htmltools (>= 0.5.4)",
+        "httpuv (>= 1.5.2)",
+        "jsonlite (>= 0.9.16)",
+        "later (>= 1.0.0)",
+        "lifecycle (>= 0.2.0)",
+        "methods",
+        "mime (>= 0.3)",
+        "otel",
+        "promises (>= 1.5.0)",
+        "rlang (>= 0.4.10)",
+        "sourcetools",
+        "tools",
+        "utils",
+        "withr",
+        "xtable"
+      ]
+    },
+    "sourcetools": {
+      "version": "0.1.7-2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.0.2)"
+      ]
+    },
+    "stringi": {
+      "version": "1.8.9",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4)",
+        "stats",
+        "tools",
+        "utils"
+      ]
+    },
+    "sys": {
+      "version": "3.4.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": []
+    },
+    "systemfonts": {
+      "version": "1.3.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.2.0)",
+        "base64enc",
+        "cpp11 (>= 0.2.1)",
+        "grid",
+        "jsonlite",
+        "lifecycle",
+        "tools",
+        "utils"
+      ]
+    },
+    "testthat": {
+      "version": "3.3.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1.0)",
+        "R6 (>= 2.6.1)",
+        "brio (>= 1.1.5)",
+        "callr (>= 3.7.6)",
+        "cli (>= 3.6.5)",
+        "desc (>= 1.4.3)",
+        "evaluate (>= 1.0.4)",
+        "jsonlite (>= 2.0.0)",
+        "lifecycle (>= 1.0.4)",
+        "magrittr (>= 2.0.3)",
+        "methods",
+        "pkgload (>= 1.4.0)",
+        "praise (>= 1.0.0)",
+        "processx (>= 3.8.6)",
+        "ps (>= 1.9.1)",
+        "rlang (>= 1.1.6)",
+        "utils",
+        "waldo (>= 0.6.2)",
+        "withr (>= 3.0.2)"
+      ]
+    },
+    "textshaping": {
+      "version": "1.0.5",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.2.0)",
+        "cpp11 (>= 0.2.1)",
+        "lifecycle",
+        "stats",
+        "stringi",
+        "systemfonts (>= 1.0.0)",
+        "systemfonts (>= 1.3.0)",
+        "utils"
+      ]
+    },
+    "tibble": {
+      "version": "3.3.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4.0)",
+        "cli",
+        "lifecycle (>= 1.0.0)",
+        "magrittr",
+        "methods",
+        "pillar (>= 1.8.1)",
+        "pkgconfig",
+        "rlang (>= 1.0.2)",
+        "utils",
+        "vctrs (>= 0.5.0)"
+      ]
+    },
+    "tidyselect": {
+      "version": "1.2.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.4)",
+        "cli (>= 3.3.0)",
+        "glue (>= 1.3.0)",
+        "lifecycle (>= 1.0.3)",
+        "rlang (>= 1.0.4)",
+        "vctrs (>= 0.5.2)",
+        "withr"
+      ]
+    },
+    "tinytex": {
+      "version": "0.60",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "xfun (>= 0.48)"
+      ]
+    },
+    "urlchecker": {
+      "version": "2.0.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)",
+        "cli",
+        "curl",
+        "gitcreds",
+        "rlang (>= 1.1.0)",
+        "tools",
+        "utils",
+        "xml2"
+      ]
+    },
+    "usethis": {
+      "version": "3.2.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.1)",
+        "cli (>= 3.0.1)",
+        "clipr (>= 0.3.0)",
+        "crayon",
+        "curl (>= 2.7)",
+        "desc (>= 1.4.2)",
+        "fs (>= 1.3.0)",
+        "gert (>= 1.4.1)",
+        "gh (>= 1.2.1)",
+        "glue (>= 1.3.0)",
+        "jsonlite",
+        "lifecycle (>= 1.0.0)",
+        "purrr",
+        "rappdirs",
+        "rlang (>= 1.1.0)",
+        "rprojroot (>= 2.1.1)",
+        "rstudioapi",
+        "stats",
+        "tools",
+        "utils",
+        "whisker",
+        "withr (>= 2.3.0)",
+        "yaml"
+      ]
+    },
+    "utf8": {
+      "version": "1.2.6",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 2.10)"
+      ]
+    },
+    "vctrs": {
+      "version": "0.7.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.0.0)",
+        "cli (>= 3.4.0)",
+        "glue",
+        "lifecycle (>= 1.0.3)",
+        "rlang (>= 1.1.7)"
+      ]
+    },
+    "waldo": {
+      "version": "0.6.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 4.0)",
+        "cli",
+        "diffobj (>= 0.3.4)",
+        "glue",
+        "methods",
+        "rlang (>= 1.1.0)"
+      ]
+    },
+    "whisker": {
+      "version": "0.4.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": []
+    },
+    "withr": {
+      "version": "3.0.3",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.6.0)",
+        "grDevices",
+        "graphics"
+      ]
+    },
+    "xfun": {
+      "version": "0.60",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.2.0)",
+        "grDevices",
+        "stats",
+        "tools"
+      ]
+    },
+    "xml2": {
+      "version": "1.6.0",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.6.0)",
+        "cli",
+        "methods",
+        "rlang (>= 1.1.0)"
+      ]
+    },
+    "xopen": {
+      "version": "1.0.1",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 3.1)",
+        "processx"
+      ]
+    },
+    "xtable": {
+      "version": "1.8-8",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "R (>= 2.10.0)",
+        "methods",
+        "stats",
+        "utils"
+      ]
+    },
+    "yaml": {
+      "version": "2.3.12",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": []
+    },
+    "zip": {
+      "version": "3.0.2",
+      "repository": "https://upstream.rrepo.dev/cran",
+      "dependencies": [
+        "cli"
+      ]
+    }
+  }
+}
