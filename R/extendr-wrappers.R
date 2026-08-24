@@ -5,8 +5,25 @@
 #' @useDynLib azidentity, .registration = TRUE
 NULL
 
-#' Return string `"Hello world!"` to R.
+#' Create the default Azure credential chain.
 #' @export
-hello_world <- function() .Call(wrap__hello_world)
+default_azure_credential <- function() .Call(wrap__default_azure_credential)
+
+#' An Azure credential that selects and retains the first authentication method that succeeds.
+#' Methods for requesting Azure access tokens.
+#' @section Methods:
+#'\subsection{Method `get_token`}{
+#'Request an access token for one or more scopes.
+#'}
+#'
+AzureCredential <- new.env(parent = emptyenv())
+
+AzureCredential$get_token <- function(scopes) .Call(wrap__AzureCredential__get_token, self, scopes)
+
+#' @export
+`$.AzureCredential` <- function (self, name) { func <- AzureCredential[[name]]; environment(func) <- environment(); func }
+
+#' @export
+`[[.AzureCredential` <- `$.AzureCredential`
 
 # nolint end
