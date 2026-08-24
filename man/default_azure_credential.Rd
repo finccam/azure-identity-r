@@ -15,3 +15,8 @@ A scalar character access token.
 \description{
 Get an access token using the default Azure credential chain.
 }
+\examples{
+\dontrun{
+default_azure_credential("https://management.azure.com/.default")
+}
+}

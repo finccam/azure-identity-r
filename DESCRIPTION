@@ -8,6 +8,10 @@ Authors@R: c(
            role = c("ctb", "cph"),
            comment = "See LICENSE.note and the bundled crate license files")
     )
+Author: Adam Smielewski [aut, cre, cph],
+    Authors and copyright holders of the dependency Rust crates [ctb, cph]
+    (See LICENSE.note and the bundled crate license files)
+Maintainer: Adam Smielewski <adam@blyedev.com>
 Description: Acquires Microsoft Azure OAuth 2.0 access tokens using a
     default credential chain backed by the Azure SDK for Rust. Supports
     environment credentials, workload identity, managed identity, the Azure

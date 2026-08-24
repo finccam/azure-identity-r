@@ -244,6 +244,10 @@ fn default_credential() -> &'static CachedCredential {
 /// Get an access token using the default Azure credential chain.
 /// @param scopes One or more Azure OAuth 2.0 scopes.
 /// @return A scalar character access token.
+/// @examples
+/// \dontrun{
+/// default_azure_credential("https://management.azure.com/.default")
+/// }
 /// @export
 #[extendr]
 fn default_azure_credential(scopes: Vec<String>) -> std::result::Result<String, String> {
