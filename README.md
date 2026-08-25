@@ -3,6 +3,20 @@
 `azidentity` acquires Microsoft Azure OAuth 2.0 access tokens from R using
 the Azure SDK for Rust.
 
+## Installation
+
+Using rpx:
+
+```sh
+rpx add azidentity
+```
+
+Using base R:
+
+```r
+install.packages("azidentity")
+```
+
 ## Usage
 
 ```r
