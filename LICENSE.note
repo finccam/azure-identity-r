@@ -1,0 +1,1418 @@
+The binary compiled from the source code of this package contains the following Rust crates:
+
+
+-------------------------------------------------------------
+
+Name:        adler2
+Repository:  https://github.com/oyvindln/adler2
+Authors:     Jonas Schievink, oyvindln
+License:     0BSD OR MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        async-compression
+Repository:  https://github.com/Nullus157/async-compression
+Authors:     Wim Looman, Allen Bui
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        async-lock
+Repository:  https://github.com/smol-rs/async-lock
+Authors:     Stjepan Glavina
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        async-trait
+Repository:  https://github.com/dtolnay/async-trait
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        atomic-waker
+Repository:  https://github.com/smol-rs/atomic-waker
+Authors:     Stjepan Glavina, Contributors to futures-rs
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        aws-lc-rs
+Repository:  https://github.com/aws/aws-lc-rs
+Authors:     AWS-LibCrypto
+License:     ISC AND (Apache-2.0 OR ISC)
+
+-------------------------------------------------------------
+
+Name:        aws-lc-sys
+Repository:  https://github.com/aws/aws-lc-rs
+Authors:     AWS-LC
+License:     ISC AND (Apache-2.0 OR ISC) AND Apache-2.0 AND MIT AND BSD-3-Clause AND (Apache-2.0 OR ISC OR MIT) AND (Apache-2.0 OR ISC OR MIT-0)
+
+-------------------------------------------------------------
+
+Name:        azure_core
+Repository:  https://github.com/azure/azure-sdk-for-rust
+Authors:     Microsoft
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        azure_core_macros
+Repository:  https://github.com/azure/azure-sdk-for-rust
+Authors:     Microsoft
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        azure_identity
+Repository:  https://github.com/azure/azure-sdk-for-rust
+Authors:     Microsoft
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        base64
+Repository:  https://github.com/marshallpierce/rust-base64
+Authors:     Marshall Pierce
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        bitflags
+Repository:  https://github.com/bitflags/bitflags
+Authors:     The Rust Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        bumpalo
+Repository:  https://github.com/fitzgen/bumpalo
+Authors:     Nick Fitzgerald
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        bytes
+Repository:  https://github.com/tokio-rs/bytes
+Authors:     Carl Lerche, Sean McArthur
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        cc
+Repository:  https://github.com/rust-lang/cc-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        cfg-if
+Repository:  https://github.com/rust-lang/cfg-if
+Authors:     Alex Crichton
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        cfg_aliases
+Repository:  https://github.com/katharostech/cfg_aliases
+Authors:     Zicklag
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        chacha20
+Repository:  https://github.com/RustCrypto/stream-ciphers
+Authors:     RustCrypto Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        cmake
+Repository:  https://github.com/rust-lang/cmake-rs
+Authors:     Alex Crichton
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        combine
+Repository:  https://github.com/Marwes/combine
+Authors:     Markus Westerlind
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        compression-codecs
+Repository:  https://github.com/Nullus157/async-compression
+Authors:     Wim Looman, Allen Bui
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        compression-core
+Repository:  https://github.com/Nullus157/async-compression
+Authors:     Wim Looman, Allen Bui
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        core-foundation
+Repository:  https://github.com/servo/core-foundation-rs
+Authors:     The Servo Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        core-foundation-sys
+Repository:  https://github.com/servo/core-foundation-rs
+Authors:     The Servo Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        cpufeatures
+Repository:  https://github.com/RustCrypto/utils
+Authors:     RustCrypto Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        crc32fast
+Repository:  https://github.com/srijs/rust-crc32fast
+Authors:     Sam Rijs, Alex Crichton
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        deranged
+Repository:  https://github.com/jhpratt/deranged
+Authors:     Jacob Pratt
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        displaydoc
+Repository:  https://github.com/yaahc/displaydoc
+Authors:     Jane Lusby
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        dunce
+Repository:  https://gitlab.com/kornelski/dunce
+Authors:     Kornel
+License:     CC0-1.0 OR MIT-0 OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        dyn-clone
+Repository:  https://github.com/dtolnay/dyn-clone
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        errno
+Repository:  https://github.com/lambda-fairy/rust-errno
+Authors:     Chris Wong, Dan Gohman
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        event-listener
+Repository:  https://github.com/smol-rs/event-listener
+Authors:     Stjepan Glavina, John Nunley
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        event-listener-strategy
+Repository:  https://github.com/smol-rs/event-listener-strategy
+Authors:     John Nunley
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        extendr-api
+Repository:  https://github.com/extendr/extendr
+Authors:     
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        extendr-ffi
+Repository:  https://github.com/extendr/extendr
+Authors:     
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        extendr-macros
+Repository:  https://github.com/extendr/extendr
+Authors:     
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        find-msvc-tools
+Repository:  https://github.com/rust-lang/cc-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        flate2
+Repository:  https://github.com/rust-lang/flate2-rs
+Authors:     Alex Crichton, Josh Triplett
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        form_urlencoded
+Repository:  https://github.com/servo/rust-url
+Authors:     The rust-url developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        fs_extra
+Repository:  https://github.com/webdesus/fs_extra
+Authors:     Denis Kurilenko
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        futures
+Repository:  https://github.com/rust-lang/futures-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        futures-channel
+Repository:  https://github.com/rust-lang/futures-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        futures-core
+Repository:  https://github.com/rust-lang/futures-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        futures-executor
+Repository:  https://github.com/rust-lang/futures-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        futures-io
+Repository:  https://github.com/rust-lang/futures-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        futures-macro
+Repository:  https://github.com/rust-lang/futures-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        futures-sink
+Repository:  https://github.com/rust-lang/futures-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        futures-task
+Repository:  https://github.com/rust-lang/futures-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        futures-util
+Repository:  https://github.com/rust-lang/futures-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        getrandom
+Repository:  https://github.com/rust-random/getrandom
+Authors:     The Rand Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        getrandom
+Repository:  https://github.com/rust-random/getrandom
+Authors:     The Rand Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        http
+Repository:  https://github.com/hyperium/http
+Authors:     Alex Crichton, Carl Lerche, Sean McArthur
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        http-body
+Repository:  https://github.com/hyperium/http-body
+Authors:     Carl Lerche, Lucio Franco, Sean McArthur
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        http-body-util
+Repository:  https://github.com/hyperium/http-body
+Authors:     Carl Lerche, Lucio Franco, Sean McArthur
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        httparse
+Repository:  https://github.com/seanmonstar/httparse
+Authors:     Sean McArthur
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        hyper
+Repository:  https://github.com/hyperium/hyper
+Authors:     Sean McArthur
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        hyper-rustls
+Repository:  https://github.com/rustls/hyper-rustls
+Authors:     
+License:     Apache-2.0 OR ISC OR MIT
+
+-------------------------------------------------------------
+
+Name:        hyper-util
+Repository:  https://github.com/hyperium/hyper-util
+Authors:     Sean McArthur
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        icu_collections
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        icu_locale_core
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        icu_normalizer
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        icu_normalizer_data
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        icu_properties
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        icu_properties_data
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        icu_provider
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        idna
+Repository:  https://github.com/servo/rust-url/
+Authors:     The rust-url developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        idna_adapter
+Repository:  https://github.com/hsivonen/idna_adapter
+Authors:     The rust-url developers
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        ipnet
+Repository:  https://github.com/krisprice/ipnet
+Authors:     Kris Price
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        itoa
+Repository:  https://github.com/dtolnay/itoa
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        jni
+Repository:  https://github.com/jni-rs/jni-rs
+Authors:     jni team
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        jni-macros
+Repository:  https://github.com/jni-rs/jni-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        jni-sys
+Repository:  https://github.com/jni-rs/jni-sys
+Authors:     Steven Fackler, Robert Bragg
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        jni-sys-macros
+Repository:  https://github.com/jni-rs/jni-sys
+Authors:     Robert Bragg
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        jobserver
+Repository:  https://github.com/rust-lang/jobserver-rs
+Authors:     Alex Crichton
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        js-sys
+Repository:  https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/js-sys
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        lazy_static
+Repository:  https://github.com/rust-lang-nursery/lazy-static.rs
+Authors:     Marvin Löbel
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        libc
+Repository:  https://github.com/rust-lang/libc
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        litemap
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        log
+Repository:  https://github.com/rust-lang/log
+Authors:     The Rust Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        lru-slab
+Repository:  https://github.com/Ralith/lru-slab
+Authors:     Benjamin Saunders
+License:     MIT OR Apache-2.0 OR Zlib
+
+-------------------------------------------------------------
+
+Name:        memchr
+Repository:  https://github.com/BurntSushi/memchr
+Authors:     Andrew Gallant, bluss
+License:     Unlicense OR MIT
+
+-------------------------------------------------------------
+
+Name:        miniz_oxide
+Repository:  https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide
+Authors:     Frommi, oyvindln, Rich Geldreich richgel99@gmail.com
+License:     MIT OR Zlib OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        mio
+Repository:  https://github.com/tokio-rs/mio
+Authors:     Carl Lerche, Thomas de Zeeuw, Tokio Contributors
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        num-conv
+Repository:  https://github.com/jhpratt/num-conv
+Authors:     Jacob Pratt
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        once_cell
+Repository:  https://github.com/matklad/once_cell
+Authors:     Aleksey Kladov
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        openssl-probe
+Repository:  https://github.com/rustls/openssl-probe
+Authors:     Alex Crichton
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        parking
+Repository:  https://github.com/smol-rs/parking
+Authors:     Stjepan Glavina, The Rust Project Developers
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        paste
+Repository:  https://github.com/dtolnay/paste
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        percent-encoding
+Repository:  https://github.com/servo/rust-url/
+Authors:     The rust-url developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        pin-project
+Repository:  https://github.com/taiki-e/pin-project
+Authors:     
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        pin-project-internal
+Repository:  https://github.com/taiki-e/pin-project
+Authors:     
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        pin-project-lite
+Repository:  https://github.com/taiki-e/pin-project-lite
+Authors:     
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        pkg-config
+Repository:  https://github.com/rust-lang/pkg-config-rs
+Authors:     Alex Crichton
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        potential_utf
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        powerfmt
+Repository:  https://github.com/jhpratt/powerfmt
+Authors:     Jacob Pratt
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        proc-macro2
+Repository:  https://github.com/dtolnay/proc-macro2
+Authors:     David Tolnay, Alex Crichton
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        quinn
+Repository:  https://github.com/quinn-rs/quinn
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        quinn-proto
+Repository:  https://github.com/quinn-rs/quinn
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        quinn-udp
+Repository:  https://github.com/quinn-rs/quinn
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        quote
+Repository:  https://github.com/dtolnay/quote
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        r-efi
+Repository:  https://github.com/r-efi/r-efi
+Authors:     
+License:     MIT OR Apache-2.0 OR LGPL-2.1-or-later
+
+-------------------------------------------------------------
+
+Name:        rand
+Repository:  https://github.com/rust-random/rand
+Authors:     The Rand Project Developers, The Rust Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        rand_core
+Repository:  https://github.com/rust-random/rand_core
+Authors:     The Rand Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        rand_pcg
+Repository:  https://github.com/rust-random/rngs
+Authors:     The Rand Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        readonly
+Repository:  https://github.com/dtolnay/readonly
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        reqwest
+Repository:  https://github.com/seanmonstar/reqwest
+Authors:     Sean McArthur
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        ring
+Repository:  https://github.com/briansmith/ring
+Authors:     
+License:     Apache-2.0 AND ISC
+
+-------------------------------------------------------------
+
+Name:        rustc-hash
+Repository:  https://github.com/rust-lang/rustc-hash
+Authors:     The Rust Project Developers
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        rustc_version
+Repository:  https://github.com/djc/rustc-version-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        rustls
+Repository:  https://github.com/rustls/rustls
+Authors:     
+License:     Apache-2.0 OR ISC OR MIT
+
+-------------------------------------------------------------
+
+Name:        rustls-native-certs
+Repository:  https://github.com/rustls/rustls-native-certs
+Authors:     
+License:     Apache-2.0 OR ISC OR MIT
+
+-------------------------------------------------------------
+
+Name:        rustls-pki-types
+Repository:  https://github.com/rustls/pki-types
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        rustls-platform-verifier
+Repository:  https://github.com/rustls/rustls-platform-verifier
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        rustls-platform-verifier-android
+Repository:  https://github.com/rustls/rustls-platform-verifier
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        rustls-webpki
+Repository:  https://github.com/rustls/webpki
+Authors:     
+License:     ISC
+
+-------------------------------------------------------------
+
+Name:        rustversion
+Repository:  https://github.com/dtolnay/rustversion
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        same-file
+Repository:  https://github.com/BurntSushi/same-file
+Authors:     Andrew Gallant
+License:     Unlicense/MIT
+
+-------------------------------------------------------------
+
+Name:        schannel
+Repository:  https://github.com/steffengy/schannel-rs
+Authors:     Steven Fackler, Steffen Butzer
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        security-framework
+Repository:  https://github.com/kornelski/rust-security-framework
+Authors:     Steven Fackler, Kornel
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        security-framework-sys
+Repository:  https://github.com/kornelski/rust-security-framework
+Authors:     Steven Fackler, Kornel
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        semver
+Repository:  https://github.com/dtolnay/semver
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        serde
+Repository:  https://github.com/serde-rs/serde
+Authors:     Erick Tryzelaar, David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        serde_core
+Repository:  https://github.com/serde-rs/serde
+Authors:     Erick Tryzelaar, David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        serde_derive
+Repository:  https://github.com/serde-rs/serde
+Authors:     Erick Tryzelaar, David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        serde_json
+Repository:  https://github.com/serde-rs/json
+Authors:     Erick Tryzelaar, David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        shlex
+Repository:  https://github.com/comex/rust-shlex
+Authors:     comex, Fenhl, Adrian Taylor, Alex Touchet, Daniel Parks, Garrett Berg
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        signal-hook-registry
+Repository:  https://github.com/vorner/signal-hook
+Authors:     Michal 'vorner' Vaner, Masaki Hara
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        simd-adler32
+Repository:  https://github.com/mcountryman/simd-adler32
+Authors:     Marvin Countryman
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        simd_cesu8
+Repository:  https://github.com/seancroach/simd_cesu8
+Authors:     Sean C. Roach
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        simdutf8
+Repository:  https://github.com/rusticstuff/simdutf8
+Authors:     Hans Kratz
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        slab
+Repository:  https://github.com/tokio-rs/slab
+Authors:     Carl Lerche
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        smallvec
+Repository:  https://github.com/servo/rust-smallvec
+Authors:     The Servo Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        socket2
+Repository:  https://github.com/rust-lang/socket2
+Authors:     Alex Crichton, Thomas de Zeeuw
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        stable_deref_trait
+Repository:  https://github.com/storyyeller/stable_deref_trait
+Authors:     Robert Grosse
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        subtle
+Repository:  https://github.com/dalek-cryptography/subtle
+Authors:     Isis Lovecruft, Henry de Valence
+License:     BSD-3-Clause
+
+-------------------------------------------------------------
+
+Name:        syn
+Repository:  https://github.com/dtolnay/syn
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        syn
+Repository:  https://github.com/dtolnay/syn
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        sync_wrapper
+Repository:  https://github.com/Actyx/sync_wrapper
+Authors:     Actyx AG
+License:     Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        synstructure
+Repository:  https://github.com/mystor/synstructure
+Authors:     Nika Layzell
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        thiserror
+Repository:  https://github.com/dtolnay/thiserror
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        thiserror-impl
+Repository:  https://github.com/dtolnay/thiserror
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        time
+Repository:  https://github.com/time-rs/time
+Authors:     Jacob Pratt, Time contributors
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        time-core
+Repository:  https://github.com/time-rs/time
+Authors:     Jacob Pratt, Time contributors
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        time-macros
+Repository:  https://github.com/time-rs/time
+Authors:     Jacob Pratt, Time contributors
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        tinystr
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        tinyvec
+Repository:  https://github.com/Lokathor/tinyvec
+Authors:     Lokathor
+License:     Zlib OR Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        tinyvec_macros
+Repository:  https://github.com/Soveu/tinyvec_macros
+Authors:     Soveu
+License:     MIT OR Apache-2.0 OR Zlib
+
+-------------------------------------------------------------
+
+Name:        tokio
+Repository:  https://github.com/tokio-rs/tokio
+Authors:     Tokio Contributors
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        tokio-macros
+Repository:  https://github.com/tokio-rs/tokio
+Authors:     Tokio Contributors
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        tokio-rustls
+Repository:  https://github.com/rustls/tokio-rustls
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        tokio-util
+Repository:  https://github.com/tokio-rs/tokio
+Authors:     Tokio Contributors
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        tower
+Repository:  https://github.com/tower-rs/tower
+Authors:     Tower Maintainers
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        tower-http
+Repository:  https://github.com/tower-rs/tower-http
+Authors:     Tower Maintainers
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        tower-layer
+Repository:  https://github.com/tower-rs/tower
+Authors:     Tower Maintainers
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        tower-service
+Repository:  https://github.com/tower-rs/tower
+Authors:     Tower Maintainers
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        tracing
+Repository:  https://github.com/tokio-rs/tracing
+Authors:     Eliza Weisman, Tokio Contributors
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        tracing-attributes
+Repository:  https://github.com/tokio-rs/tracing
+Authors:     Tokio Contributors, Eliza Weisman, David Barsky
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        tracing-core
+Repository:  https://github.com/tokio-rs/tracing
+Authors:     Tokio Contributors
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        try-lock
+Repository:  https://github.com/seanmonstar/try-lock
+Authors:     Sean McArthur
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        typespec
+Repository:  https://github.com/azure/azure-sdk-for-rust
+Authors:     Microsoft
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        typespec_client_core
+Repository:  https://github.com/azure/azure-sdk-for-rust
+Authors:     Microsoft
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        typespec_macros
+Repository:  https://github.com/azure/azure-sdk-for-rust
+Authors:     Microsoft
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        unicode-ident
+Repository:  https://github.com/dtolnay/unicode-ident
+Authors:     David Tolnay
+License:     (MIT OR Apache-2.0) AND Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        untrusted
+Repository:  https://github.com/briansmith/untrusted
+Authors:     Brian Smith
+License:     ISC
+
+-------------------------------------------------------------
+
+Name:        url
+Repository:  https://github.com/servo/rust-url
+Authors:     The rust-url developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        utf8_iter
+Repository:  https://github.com/hsivonen/utf8_iter
+Authors:     Henri Sivonen
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        uuid
+Repository:  https://github.com/uuid-rs/uuid
+Authors:     Ashley Mannix<ashleymannix@live.com.au>, Dylan DPC<dylan.dpc@gmail.com>, Hunar Roop Kahlon<hunar.roop@gmail.com>
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        walkdir
+Repository:  https://github.com/BurntSushi/walkdir
+Authors:     Andrew Gallant
+License:     Unlicense/MIT
+
+-------------------------------------------------------------
+
+Name:        want
+Repository:  https://github.com/seanmonstar/want
+Authors:     Sean McArthur
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        wasi
+Repository:  https://github.com/bytecodealliance/wasi
+Authors:     The Cranelift Project Developers
+License:     Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        wasm-bindgen
+Repository:  https://github.com/wasm-bindgen/wasm-bindgen
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        wasm-bindgen-futures
+Repository:  https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/futures
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        wasm-bindgen-macro
+Repository:  https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/macro
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        wasm-bindgen-macro-support
+Repository:  https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/macro-support
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        wasm-bindgen-shared
+Repository:  https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/shared
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        wasm-streams
+Repository:  https://github.com/MattiasBuelens/wasm-streams/
+Authors:     Mattias Buelens
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        web-sys
+Repository:  https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/web-sys
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        web-time
+Repository:  https://github.com/daxpedda/web-time
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        webpki-root-certs
+Repository:  https://github.com/rustls/webpki-roots
+Authors:     
+License:     CDLA-Permissive-2.0
+
+-------------------------------------------------------------
+
+Name:        winapi-util
+Repository:  https://github.com/BurntSushi/winapi-util
+Authors:     Andrew Gallant
+License:     Unlicense OR MIT
+
+-------------------------------------------------------------
+
+Name:        windows-link
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows-sys
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows-sys
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows-targets
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows_aarch64_gnullvm
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows_aarch64_msvc
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows_i686_gnu
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows_i686_gnullvm
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows_i686_msvc
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows_x86_64_gnu
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows_x86_64_gnullvm
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows_x86_64_msvc
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        writeable
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        yoke
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     Manish Goregaokar
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        yoke-derive
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     Manish Goregaokar
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        zerofrom
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        zerofrom-derive
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     Manish Goregaokar
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        zeroize
+Repository:  https://github.com/RustCrypto/utils
+Authors:     The RustCrypto Project Developers
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        zerotrie
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        zerovec
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     The ICU4X Project Developers
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        zerovec-derive
+Repository:  https://github.com/unicode-org/icu4x
+Authors:     Manish Goregaokar
+License:     Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        zmij
+Repository:  https://github.com/dtolnay/zmij
+Authors:     David Tolnay
+License:     MIT
+
+-------------------------------------------------------------

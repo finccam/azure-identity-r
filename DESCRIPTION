@@ -1,20 +1,33 @@
 Package: azidentity
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Title: Azure Default Credential Authentication
+Version: 1.0.0
+Authors@R: c(
+    person("Adam", "Smielewski", email = "adam@blyedev.com",
+           role = c("aut", "cre", "cph")),
+    person("Authors and copyright holders of the dependency Rust crates",
+           role = c("ctb", "cph"),
+           comment = "See LICENSE.note and the bundled crate license files")
+    )
+Author: Adam Smielewski [aut, cre, cph],
+    Authors and copyright holders of the dependency Rust crates [ctb, cph]
+    (See LICENSE.note and the bundled crate license files)
+Maintainer: Adam Smielewski <adam@blyedev.com>
+Description: Acquires Microsoft Azure OAuth 2.0 access tokens using a
+    default credential chain backed by the Azure SDK for Rust. Supports
+    environment credentials, workload identity, managed identity, the Azure
+    CLI, and the Azure Developer CLI, with process-level credential and token
+    caching.
+License: MIT + file LICENSE
+URL: https://github.com/finccam/azure-identity-r
+BugReports: https://github.com/finccam/azure-identity-r/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-Imports:
-    rextendr (< 1.0.0),
-    rextendr (>= 0.5.0)
 Config/rextendr/version: 0.5.0
 SystemRequirements: Cargo (Rust's package manager), rustc >= 1.88.0, xz
 Depends: R (>= 4.2)
 Suggests:
     devtools (< 3.0.0),
-    devtools (>= 2.5.2)
+    devtools (>= 2.5.2),
+    rextendr (< 1.0.0),
+    rextendr (>= 0.5.0)
 Config/roxygen2/version: 8.1.0
