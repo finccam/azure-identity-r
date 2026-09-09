@@ -1,5 +1,5 @@
 Package: azidentity
-Title: Azure Default Credential Authentication
+Title: 'Azure' Default Credential Authentication
 Version: 1.0.0
 Authors@R: c(
     person("Adam", "Smielewski", email = "adam@blyedev.com",
@@ -12,11 +12,14 @@ Author: Adam Smielewski [aut, cre, cph],
     Authors and copyright holders of the dependency Rust crates [ctb, cph]
     (See LICENSE.note and the bundled crate license files)
 Maintainer: Adam Smielewski <adam@blyedev.com>
-Description: Acquires Microsoft Azure OAuth 2.0 access tokens using a
-    default credential chain backed by the Azure SDK for Rust. Supports
-    environment credentials, workload identity, managed identity, the Azure
-    CLI, and the Azure Developer CLI, with process-level credential and token
-    caching.
+Description: Acquires 'Microsoft Azure' access tokens using the OAuth 2.0
+    protocol <https://www.rfc-editor.org/rfc/rfc6749> and a default credential
+    chain backed by the 'Azure SDK for Rust'
+    <https://github.com/Azure/azure-sdk-for-rust>. Supports environment
+    credentials, workload identity, managed identity, the 'Azure CLI',
+    and the 'Azure Developer CLI', with process-level credential and token
+    caching. For more information about 'Azure', see
+    <https://azure.microsoft.com/>.
 License: MIT + file LICENSE
 URL: https://github.com/finccam/azure-identity-r
 BugReports: https://github.com/finccam/azure-identity-r/issues

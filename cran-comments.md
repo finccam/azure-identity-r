@@ -1,4 +1,11 @@
-## R CMD check results
+## Resubmission
+
+In response to CRAN's feedback:
+
+* Single-quoted software names in the Title and Description fields.
+* Added web references for Azure, the Azure SDK for Rust, and OAuth 2.0.
+
+## Previous submission R CMD check results
 
 0 errors | 0 warnings | 1 note
 
