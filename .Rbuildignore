@@ -9,3 +9,4 @@
 ^src/Makevars\.win$
 ^src/symbols\.rds$
 ^src/.*\.(o|so|dll)$
+^CRAN-SUBMISSION$
