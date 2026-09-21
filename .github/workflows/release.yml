@@ -58,10 +58,6 @@ jobs:
             runner: macos-15
             shell: bash
             rust: stable
-          - name: macos-x86_64
-            runner: macos-15-intel
-            shell: bash
-            rust: stable
     steps:
       - uses: r-lib/actions/setup-r@v2
         with:
