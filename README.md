@@ -25,7 +25,7 @@ series (`release` and `oldrel-1`):
 
 - Ubuntu 24.04, x86_64
 - Windows, x86_64
-- macOS, arm64 and x86_64
+- macOS, arm64 (Apple Silicon)
 
 The [GitHub Release](https://github.com/finccam/azure-identity-r/releases)
 includes a download table and `SHA256SUMS`. The source archive is named
