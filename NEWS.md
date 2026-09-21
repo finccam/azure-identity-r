@@ -1,4 +1,4 @@
-# azidentity (development version)
+# azidentity 1.1.0
 
 * Bound IMDS discovery to one second without retries so local authentication
   reaches Azure CLI promptly when managed identity is unavailable. Preserve

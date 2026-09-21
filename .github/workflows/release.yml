@@ -1,0 +1,133 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  source:
+    name: Source package
+    runs-on: ubuntu-24.04
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: release
+      - name: Check release version
+        id: version
+        shell: bash
+        run: |
+          version=$(awk '$1 == "Version:" {print $2}' DESCRIPTION)
+          test "$GITHUB_REF_NAME" = "v$version"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - name: Build source package
+        run: R CMD build --no-build-vignettes --no-manual .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source
+          path: azidentity_*.tar.gz
+          if-no-files-found: error
+
+  binaries:
+    name: ${{ matrix.platform.name }} / R ${{ matrix.r }}
+    needs: source
+    runs-on: ${{ matrix.platform.runner }}
+    defaults:
+      run:
+        shell: ${{ matrix.platform.shell }}
+    strategy:
+      fail-fast: false
+      matrix:
+        r: [release, oldrel-1]
+        platform:
+          - name: ubuntu-24.04-x86_64
+            runner: ubuntu-24.04
+            shell: bash
+            rust: stable
+          - name: windows-x86_64
+            runner: windows-2022
+            shell: cmd
+            rust: stable-x86_64-pc-windows-gnu
+          - name: macos-arm64
+            runner: macos-15
+            shell: bash
+            rust: stable
+          - name: macos-x86_64
+            runner: macos-15-intel
+            shell: bash
+            rust: stable
+    steps:
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ matrix.r }}
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: ${{ matrix.platform.rust }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: source
+          path: source
+      - name: Compile binary package
+        run: R CMD INSTALL --build --no-multiarch source/azidentity_${{ needs.source.outputs.version }}.tar.gz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: binary-${{ matrix.platform.name }}-${{ matrix.r }}
+          path: azidentity_*
+          if-no-files-found: error
+
+  publish:
+    name: Publish release
+    needs: [source, binaries]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: source
+          path: release
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: binary-*
+          path: binaries
+      - name: Bundle binaries by matrix target
+        run: |
+          for directory in binaries/*; do
+            name=$(basename "$directory")
+            zip -j "release/$name.zip" "$directory"/*
+          done
+      - name: Checksums and download table
+        working-directory: release
+        env:
+          RELEASE_URL: https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}
+        run: |
+          sha256sum * > SHA256SUMS
+          {
+            echo '## Downloads'
+            echo
+            echo 'Binary bundles are labeled by platform, architecture, and R release series.'
+            echo 'Extract the outer ZIP, then run R CMD INSTALL on the package archive inside.'
+            echo 'Linux binaries target Ubuntu 24.04.'
+            echo
+            echo '| Artifact | Download |'
+            echo '| --- | --- |'
+            for file in *; do
+              echo "| $file | [Download]($RELEASE_URL/$file) |"
+            done
+          } > ../release-notes.md
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$TAG" --verify-tag --draft --title "$TAG" \
+            --generate-notes --notes-file release-notes.md
+          gh release upload "$TAG" release/*
+          gh release edit "$TAG" --draft=false
