@@ -17,6 +17,34 @@ Using base R:
 install.packages("azidentity")
 ```
 
+## GitHub releases
+
+Pushing a tag matching the version in `DESCRIPTION` (for example, `v1.0.0`)
+builds a source package and binaries for the current and previous R release
+series (`release` and `oldrel-1`):
+
+- Ubuntu 24.04, x86_64
+- Windows, x86_64
+- macOS, arm64 and x86_64
+
+The [GitHub Release](https://github.com/finccam/azure-identity-r/releases)
+includes a download table and `SHA256SUMS`. The source archive is named
+`azidentity_<version>.tar.gz`. Binary containers are named by the matrix, for
+example `binary-windows-x86_64-release.zip`. Each contains the standard R
+package archive: `azidentity_<version>.zip` on Windows, `.tgz` on macOS, or
+`.tar.gz` on Ubuntu. Choose a container matching your R release series and
+platform, then extract the outer ZIP. Ubuntu binaries are built for Ubuntu
+24.04.
+
+Install a downloaded archive from a terminal with:
+
+```sh
+R CMD INSTALL <downloaded-package-archive>
+```
+
+The workflow builds the source archive once and compiles every binary from it.
+It does not run a test suite or `R CMD check`.
+
 ## Usage
 
 ```r
