@@ -1,6 +1,6 @@
 Package: azidentity
 Title: 'Azure' Default Credential Authentication
-Version: 1.0.0
+Version: 1.1.0
 Authors@R: c(
     person("Adam", "Smielewski", email = "adam@blyedev.com",
            role = c("aut", "cre", "cph")),

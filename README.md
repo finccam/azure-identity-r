@@ -19,7 +19,7 @@ install.packages("azidentity")
 
 ## GitHub releases
 
-Pushing a tag matching the version in `DESCRIPTION` (for example, `v1.0.0`)
+Pushing a tag matching the version in `DESCRIPTION` (for example, `v1.1.0`)
 builds a source package and binaries for the current and previous R release
 series (`release` and `oldrel-1`):
 
