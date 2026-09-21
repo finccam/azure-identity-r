@@ -19,6 +19,8 @@ use std::{
 };
 use tokio::{runtime::Runtime, sync::Mutex};
 
+mod managed_identity;
+
 const NO_CREDENTIAL_SELECTED: usize = usize::MAX;
 const REFRESH_OFFSET_SECONDS: i64 = 300;
 
@@ -209,10 +211,17 @@ fn environment_credential() -> NamedCredential {
 }
 
 fn managed_identity_credential() -> NamedCredential {
-    named_credential(
-        "ManagedIdentityCredential",
-        ManagedIdentityCredential::new(managed_identity_options(env::var("AZURE_CLIENT_ID").ok())),
-    )
+    let credential =
+        ManagedIdentityCredential::new(managed_identity_options(env::var("AZURE_CLIENT_ID").ok()))
+            .map(|credential| {
+                let probe_client = managed_identity::uses_imds(|name| env::var(name).is_ok())
+                    .then(|| azure_core::http::new_http_client(None));
+                Arc::new(managed_identity::ManagedIdentityDiscovery::new(
+                    credential,
+                    probe_client,
+                ))
+            });
+    named_credential("ManagedIdentityCredential", credential)
 }
 
 fn managed_identity_options(client_id: Option<String>) -> Option<ManagedIdentityCredentialOptions> {

@@ -73,6 +73,14 @@ Environment authentication uses `AZURE_TENANT_ID`, `AZURE_CLIENT_ID`, and
 selects a user-assigned identity; otherwise, the system-assigned identity is
 used.
 
+For VM managed-identity discovery, the chain probes the IMDS token endpoint
+once per attempt, with no retries and a one-second deadline. If the endpoint
+does not respond, the chain continues to developer credentials. Once it
+responds, the SDK's normal managed-identity authentication retries apply and
+subsequent requests skip discovery. Configured managed-identity sources such
+as App Service bypass this probe. A slow IMDS endpoint can miss the discovery
+deadline even on an Azure VM.
+
 The first successful credential is reused for the lifetime of the R process.
 Tokens are cached by scope and refreshed when fewer than five minutes remain
 before expiration.

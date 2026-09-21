@@ -1,8 +1,9 @@
 # azidentity 1.1.0
 
-* Add tag-triggered GitHub releases with a source package and compiled binaries
-  for Ubuntu 24.04, Windows, and macOS across the current and previous R release
-  series.
+* Bound IMDS discovery to one second without retries so local authentication
+  reaches Azure CLI promptly when managed identity is unavailable. Preserve
+  normal authentication retries after IMDS responds and bypass the probe for
+  configured managed-identity sources (#4).
 
 # azidentity 1.0.0
 
