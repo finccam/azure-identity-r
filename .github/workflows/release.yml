@@ -38,6 +38,9 @@ jobs:
     name: ${{ matrix.platform.name }} / R ${{ matrix.r }}
     needs: source
     runs-on: ${{ matrix.platform.runner }}
+    defaults:
+      run:
+        shell: ${{ matrix.platform.shell }}
     strategy:
       fail-fast: false
       matrix:
@@ -45,15 +48,19 @@ jobs:
         platform:
           - name: ubuntu-24.04-x86_64
             runner: ubuntu-24.04
+            shell: bash
             rust: stable
           - name: windows-x86_64
             runner: windows-2022
+            shell: cmd
             rust: stable-x86_64-pc-windows-gnu
           - name: macos-arm64
             runner: macos-15
+            shell: bash
             rust: stable
           - name: macos-x86_64
             runner: macos-15-intel
+            shell: bash
             rust: stable
     steps:
       - uses: r-lib/actions/setup-r@v2
@@ -67,7 +74,6 @@ jobs:
           name: source
           path: source
       - name: Compile binary package
-        shell: ${{ runner.os == 'Windows' && 'cmd' || 'bash' }}
         run: R CMD INSTALL --build --no-multiarch source/azidentity_${{ needs.source.outputs.version }}.tar.gz
       - uses: actions/upload-artifact@v4
         with:
