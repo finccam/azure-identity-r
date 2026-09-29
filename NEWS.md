@@ -1,4 +1,4 @@
-# azidentity (development version)
+# azidentity 1.2.0
 
 * `AZURE_TOKEN_CREDENTIALS` limits the credential chain, as in the Azure SDK
   for Python. `dev` keeps the developer tools, `prod` keeps the environment,
