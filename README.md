@@ -85,6 +85,23 @@ The first successful credential is reused for the lifetime of the R process.
 Tokens are cached by scope and refreshed when fewer than five minutes remain
 before expiration.
 
+### Selecting credentials
+
+`AZURE_TOKEN_CREDENTIALS` limits the chain to some of its credentials, as in
+the Azure SDK for Python:
+
+| Value | Credentials |
+|---|---|
+| `dev` | Azure CLI, Azure Developer CLI |
+| `prod` | Environment, workload identity, managed identity |
+| A credential name, such as `AzureCliCredential` | Only that credential |
+
+The value is case-insensitive. Any other value is an error. The package reads
+the variable on the first call of `default_azure_credential()`.
+
+Use `dev` on an Azure VM whose managed identity has no access to the resource.
+The chain then skips the managed identity and uses the Azure CLI login.
+
 ## Requirements
 
 Installing from source requires Cargo, Rust 1.88 or newer, and `xz`.
