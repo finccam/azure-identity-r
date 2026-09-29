@@ -23,6 +23,79 @@ mod managed_identity;
 
 const NO_CREDENTIAL_SELECTED: usize = usize::MAX;
 const REFRESH_OFFSET_SECONDS: i64 = 300;
+const TOKEN_CREDENTIALS_VARIABLE: &str = "AZURE_TOKEN_CREDENTIALS";
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+enum Credential {
+    Environment,
+    WorkloadIdentity,
+    ManagedIdentity,
+    AzureCli,
+    AzureDeveloperCli,
+}
+
+impl Credential {
+    const CHAIN: [Credential; 5] = [
+        Credential::Environment,
+        Credential::WorkloadIdentity,
+        Credential::ManagedIdentity,
+        Credential::AzureCli,
+        Credential::AzureDeveloperCli,
+    ];
+
+    const fn name(self) -> &'static str {
+        match self {
+            Credential::Environment => "EnvironmentCredential",
+            Credential::WorkloadIdentity => "WorkloadIdentityCredential",
+            Credential::ManagedIdentity => "ManagedIdentityCredential",
+            Credential::AzureCli => "AzureCliCredential",
+            Credential::AzureDeveloperCli => "AzureDeveloperCliCredential",
+        }
+    }
+
+    fn is_developer_tool(self) -> bool {
+        matches!(self, Credential::AzureCli | Credential::AzureDeveloperCli)
+    }
+
+    fn build(self) -> NamedCredential {
+        match self {
+            Credential::Environment => environment_credential(),
+            Credential::WorkloadIdentity => {
+                named_credential(self.name(), WorkloadIdentityCredential::new(None))
+            }
+            Credential::ManagedIdentity => managed_identity_credential(),
+            Credential::AzureCli => named_credential(self.name(), AzureCliCredential::new(None)),
+            Credential::AzureDeveloperCli => {
+                named_credential(self.name(), AzureDeveloperCliCredential::new(None))
+            }
+        }
+    }
+}
+
+/// Selects the credentials of the chain from the value of `AZURE_TOKEN_CREDENTIALS`, as the Azure
+/// SDK for Python does: "dev" keeps the developer tools, "prod" keeps the others, and a
+/// credential name keeps only that credential. The value is case-insensitive.
+fn selected_credentials(
+    token_credentials: Option<&str>,
+) -> std::result::Result<Vec<Credential>, String> {
+    let value = token_credentials.unwrap_or_default().trim();
+    let chain = Credential::CHAIN.into_iter();
+    match value.to_lowercase().as_str() {
+        "" => Ok(chain.collect()),
+        "dev" => Ok(chain.filter(|credential| credential.is_developer_tool()).collect()),
+        "prod" => Ok(chain.filter(|credential| !credential.is_developer_tool()).collect()),
+        name => Credential::CHAIN
+            .into_iter()
+            .find(|credential| credential.name().eq_ignore_ascii_case(name))
+            .map(|credential| vec![credential])
+            .ok_or_else(|| {
+                let names = Credential::CHAIN.map(Credential::name).join(", ");
+                format!(
+                    "Invalid value for {TOKEN_CREDENTIALS_VARIABLE}: {value}. Valid values are: dev, prod, {names}."
+                )
+            }),
+    }
+}
 
 struct NamedCredential {
     name: &'static str,
@@ -50,25 +123,16 @@ impl fmt::Debug for DefaultAzureCredential {
 }
 
 impl DefaultAzureCredential {
-    fn new() -> Self {
-        let credentials = vec![
-            environment_credential(),
-            named_credential(
-                "WorkloadIdentityCredential",
-                WorkloadIdentityCredential::new(None),
-            ),
-            managed_identity_credential(),
-            named_credential("AzureCliCredential", AzureCliCredential::new(None)),
-            named_credential(
-                "AzureDeveloperCliCredential",
-                AzureDeveloperCliCredential::new(None),
-            ),
-        ];
+    fn new(token_credentials: Option<&str>) -> std::result::Result<Self, String> {
+        let credentials = selected_credentials(token_credentials)?
+            .into_iter()
+            .map(Credential::build)
+            .collect();
 
-        Self {
+        Ok(Self {
             credentials,
             successful_index: AtomicUsize::new(NO_CREDENTIAL_SELECTED),
-        }
+        })
     }
 
     #[cfg(test)]
@@ -191,7 +255,7 @@ where
 }
 
 fn environment_credential() -> NamedCredential {
-    const NAME: &str = "EnvironmentCredential";
+    const NAME: &str = Credential::Environment.name();
     let tenant_id = env::var("AZURE_TENANT_ID");
     let client_id = env::var("AZURE_CLIENT_ID");
     let client_secret = env::var("AZURE_CLIENT_SECRET");
@@ -221,7 +285,7 @@ fn managed_identity_credential() -> NamedCredential {
                     probe_client,
                 ))
             });
-    named_credential("ManagedIdentityCredential", credential)
+    named_credential(Credential::ManagedIdentity.name(), credential)
 }
 
 fn managed_identity_options(client_id: Option<String>) -> Option<ManagedIdentityCredentialOptions> {
@@ -245,9 +309,17 @@ fn runtime() -> std::result::Result<&'static Runtime, String> {
     Ok(RUNTIME.get().expect("Tokio runtime was initialized"))
 }
 
-fn default_credential() -> &'static CachedCredential {
+fn default_credential() -> std::result::Result<&'static CachedCredential, String> {
     static CREDENTIAL: OnceLock<CachedCredential> = OnceLock::new();
-    CREDENTIAL.get_or_init(|| CachedCredential::new(Arc::new(DefaultAzureCredential::new())))
+    if let Some(credential) = CREDENTIAL.get() {
+        return Ok(credential);
+    }
+
+    let chain = DefaultAzureCredential::new(env::var(TOKEN_CREDENTIALS_VARIABLE).ok().as_deref())?;
+    let _ = CREDENTIAL.set(CachedCredential::new(Arc::new(chain)));
+    Ok(CREDENTIAL
+        .get()
+        .expect("default credential was initialized"))
 }
 
 /// Get an access token using the default Azure credential chain.
@@ -264,8 +336,9 @@ fn default_azure_credential(scopes: Vec<String>) -> std::result::Result<String, 
         return Err("at least one scope is required".to_string());
     }
 
+    let credential = default_credential()?;
     let token = runtime()?
-        .block_on(default_credential().get_token(scopes))
+        .block_on(credential.get_token(scopes))
         .map_err(|error| error.to_string())?;
     Ok(token.token.secret().to_string())
 }
@@ -435,5 +508,69 @@ mod tests {
             Some(UserAssignedId::ClientId(client_id)) => assert_eq!(client_id, "client-id"),
             _ => panic!("expected a user-assigned managed identity client ID"),
         }
+    }
+
+    #[test]
+    fn keeps_the_whole_chain_without_token_credentials() {
+        for value in [None, Some(""), Some("  ")] {
+            assert_eq!(selected_credentials(value).unwrap(), Credential::CHAIN);
+        }
+    }
+
+    #[test]
+    fn keeps_the_developer_tools_for_dev() {
+        for value in ["dev", " DEV "] {
+            assert_eq!(
+                selected_credentials(Some(value)).unwrap(),
+                [Credential::AzureCli, Credential::AzureDeveloperCli]
+            );
+        }
+    }
+
+    #[test]
+    fn keeps_the_service_credentials_for_prod() {
+        assert_eq!(
+            selected_credentials(Some("prod")).unwrap(),
+            [
+                Credential::Environment,
+                Credential::WorkloadIdentity,
+                Credential::ManagedIdentity
+            ]
+        );
+    }
+
+    #[test]
+    fn keeps_one_credential_for_its_name_in_any_case() {
+        for value in ["AzureCliCredential", " azureclicredential "] {
+            assert_eq!(
+                selected_credentials(Some(value)).unwrap(),
+                [Credential::AzureCli]
+            );
+        }
+        assert_eq!(
+            selected_credentials(Some("ManagedIdentityCredential")).unwrap(),
+            [Credential::ManagedIdentity]
+        );
+    }
+
+    #[test]
+    fn rejects_an_unknown_token_credentials_value() {
+        assert_eq!(
+            selected_credentials(Some(" laptop ")).unwrap_err(),
+            "Invalid value for AZURE_TOKEN_CREDENTIALS: laptop. Valid values are: dev, prod, \
+             EnvironmentCredential, WorkloadIdentityCredential, ManagedIdentityCredential, \
+             AzureCliCredential, AzureDeveloperCliCredential."
+        );
+    }
+
+    #[test]
+    fn builds_only_the_selected_credentials() {
+        let chain = DefaultAzureCredential::new(Some("dev")).unwrap();
+        let names = chain
+            .credentials
+            .iter()
+            .map(|credential| credential.name)
+            .collect::<Vec<_>>();
+        assert_eq!(names, ["AzureCliCredential", "AzureDeveloperCliCredential"]);
     }
 }
